@@ -1,4 +1,4 @@
-function sumOfEvenFibonacciNumbersLessOrEqualThan4million() {
+function sumOfEvenFibonacciNumbersLessOrEqualThanMax(maxValue) {
 	let fiboNumberPrev = 1; // 1st fibo number
 	let fiboNumber = 2; // 2nd fibo number
 	let result = 2;
@@ -9,7 +9,7 @@ function sumOfEvenFibonacciNumbersLessOrEqualThan4million() {
 		fiboNumberPrev = fiboNumber;
 		fiboNumber = newFiboNumber;
 		order++;
-		if (fiboNumber <= 4000000) {
+		if (fiboNumber <= maxValue) {
 			if (order === 3) {
 				result = result + fiboNumber;
 				order = 0;
@@ -21,4 +21,4 @@ function sumOfEvenFibonacciNumbersLessOrEqualThan4million() {
 	return result;
 }
 
-console.log("Result:", sumOfEvenFibonacciNumbersLessOrEqualThan4million());
+console.log("Result:", sumOfEvenFibonacciNumbersLessOrEqualThanMax(4000000));
